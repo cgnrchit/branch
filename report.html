@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reportstyle.css">
+    <link rel="shortcut icon" type="shortcuticon" href="ico.png">     
+    <title>Chitty Collection</title>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">CHENGANNUR CHITS</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="collection.html"><img src="pencil.png" alt="" class="nav-icon">Collection</a></li>
+                <li><a href="report.html" class="active" ><img src="report.png" alt="" class="nav-icon">Report</a></li>
+                <li><a href="chart.html"><img src="chart.png" alt="" class="nav-icon">Chart</a></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="action"><img src="logout.png" alt="" class="nav-icon">Logout</a>
+    </header>
+    
+    <h2 class="title">
+        <img src="report.png" alt="Pencil Icon" class="title-icon"> Collection Report
+    </h2>
+    
+     <div class="filter-container">
+        <label for="searchBox">Branch</label>
+        <p name="branchName" id="branchName"></p>
+        <input type="hidden" name="branchName" id="hiddenBranchName" /> 
+    </div>
+    
+    <form action="#" id="collectionForm"> </form>
+    <div class="table-container"> 
+
+    <!--table head --------------------------------->          
+      <table id="dataTable">
+            <thead>
+                <tr>
+                    <th style="width: 9%; text-align: center;">Branch</th>
+                    <th style="width: 8%; text-align: center;">Deposit Date</th>
+                    <th style="width: 175px; text-align: center;">Staff Name</th>
+                    <th style="width: 8%; text-align: center;">Receipt Date</th>
+                    <th style="width: 19%; text-align: center;">Customer Name</th>
+                    <th style="width: 7%; text-align: center;">Chitty Number</th>
+                    <th style="width: 7%; text-align: center;">Instalment</th>
+                    <th style="width: 7%; text-align: center;">Receipt Number</th>
+                    <th style="width: 7%; text-align: center;">Amount</th>
+                    <th style="width: 7%; text-align: center;">Commission</th>
+                    <th style="width: 7%; text-align: center;">Bank Amount</th>                   
+                    
+                </tr>
+            </thead>
+ 
+            <tbody id="tblBody"></tbody>
+                        
+
+                        
+
+        </table>
+
+    </div>
+    <!--script --------------------------------->  
+    <script type="module" src="report.js"></script>
+    <script src="brpic.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
