@@ -52,7 +52,7 @@ collectionForm.addEventListener("submit", function(e) {
 
     push(collectionListDB, collect)
         .then(() => {
-            alert("Data successfully added!");
+            alert("Data Saved......");
             collectionForm.reset(); // Optional: Reset the form after submission
         })
         .catch((error) => {
