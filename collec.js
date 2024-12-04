@@ -61,5 +61,58 @@ collectionForm.addEventListener("submit", function(e) {
         });
 });
 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwhgZCH_8UgMKeOUgq7V0tq7oBCijfnkW5bsglv6qSNrbj9OciG-_PK21nDH0mN0uYP/exec';
+    const form = document.forms['collectionForm'];
+    
+  
+   
+      // Capture current date and time
+      const currentDateTime = new Date().toLocaleString('en-GB', { timeZone: 'Asia/Kolkata' });
+      const [date, time] = currentDateTime.split(', ');
+      document.getElementById('date').value = date;
+      document.getElementById('time').value = time;
+
+      // Submit the form programmatically
+      form.requestSubmit(); // Use requestSubmit to trigger submit event
+    
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission
+
+      fetch(scriptURL, { method: 'POST', body: new collectionForm(form) })
+        .then(response => {
+          alert("Thank you! Your form is submitted successfully.");
+          form.reset(); // Clear the form
+          
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          
+        });
+    });
+
+    const branchName = localStorage.getItem('branchName');
+    if (branchName) {
+      document.getElementById('branchName').textContent = branchName;
+      document.getElementById('branchName').value = branchName;
+    } else {
+      window.location.href = 'collection.html'; // Redirect to login if no branch name found
+    }
+
+    const saveAndClearBtn = document.getElementById('saveAndClearBtn');
+
+    function saveAndClear() {
+      // Disable the button to prevent multiple submissions
+      saveAndClearBtn.disabled = true;
+
+      // Capture current date and time
+      const currentDateTime = new Date().toLocaleString('en-GB', { timeZone: 'Asia/Kolkata' });
+      const [date, time] = currentDateTime.split(', ');
+      document.getElementById('date').value = date;
+      document.getElementById('time').value = time;
+
+      // Submit the form programmatically
+      form.requestSubmit(); // Use requestSubmit to trigger submit event
+    }
 
 
