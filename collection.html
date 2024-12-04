@@ -25,37 +25,38 @@
         <img src="pencil.png" alt="Pencil Icon" class="title-icon">Collection
     </h2>
 
-    <div class="form-group">
-        <label for="branchName">Branch</label>
-          <p name="branchName" id="branchName"></p>
-          <input type="hidden" name="branchName" id="hiddenBranchName" />
-        </div>
+    
 
     <div class="wrapper">
     <form action="#" id="collectionForm">
+        <div class="form-group">
+            <label for="branchName">Branch</label>
+              <p name="branchName" id="branchName"></p>
+              <input type="hidden" name="branchName" id="hiddenBranchName" />
+            </div>
 
         <div class="content">
             <div class="input-box">
                 <input type="hidden" id="id" />
 
                 <label for="deposit-date">Deposit Date</label>
-                <input type="date" placeholder="Deposit-date" id="depositDate" required>
+                <input type="date" name="Bank Deposite Date" placeholder="Deposit-date" id="depositDate" required>
             </div>
             <div class="input-box">
-                <label for="staff-name">Deposited By</label>
-                <input type="text" placeholder="Staff name or Method of payment" id="staffName"  autocomplete="off" required>
+                <label for="staff-name">Staff Name</label>
+                <input type="text" name="Deposited" placeholder="Staff full Name" id="staffName" required>
             </div>
             <div class="input-box">
                 <label for="receipt-date">Receipt Date</label>
-                <input type="date" placeholder="Receipt-date" id="receiptDate" required>
+                <input type="date" name="recipt-date" placeholder="Receipt-date" id="receiptDate" required>
             </div>
             <div class="input-box">
                 <label for="cust-name">Customer Name</label>
-                <input type="text" placeholder="Customer Full Name" id="custName" autocomplete="off" required>
+                <input type="text" name="customer-name" placeholder="Customer Full Name" id="custName" required>
             </div>
             <div class="input-box">
                 <label for="chit-number">Chitty Number</label>
-                <select id="chitNumber" required>
+                <select id="chitNumber" name="chit-number" required>
                     <option disabled selected>Select Chitty Number</option>
                     <option>New </option>
                     <option>58/2021</option>
@@ -82,33 +83,38 @@
                     <option>51/2024</option>
                     <option>56/2024</option>
                     <option>57/2024</option>
+
                 </select>
             </div>
             <div class="input-box">
                 <label for="instalment">Instalment</label>
-                <input type="number" placeholder="Instalment Number" id="instalment" autocomplete="off" required>
+                <input type="number" name="chity-instalment" placeholder="Instalment Number" id="instalment" required>
             </div>
             <div class="input-box">
                 <label for="receipt-num">Receipt Number</label>
-                <input type="number" placeholder="Receipt Number" id="receiptNum" autocomplete="off" required>
+                <input type="text" name="recipt-num" placeholder="Receipt Number" id="receiptNum" required>
             </div>
             <div class="input-box">
                 <label for="amount">Amount</label>
-                <input type="number" placeholder="Collection Amount" id="amount" autocomplete="off" required>
+                <input type="number" name="amount" placeholder="Collection Amount" id="amount" required>
             </div>
             <div class="input-box">
                 <label for="commission">Commission</label>
-                <input type="number" placeholder="Commission" id="commission" autocomplete="off">
+                <input type="text" name="commision" placeholder="Commission" id="commission">
             </div>
             <div class="input-box">
                 <label for="bank-amount">Bank Amount</label>
-                <input type="number" placeholder="Amount Deposited In Bank" id="bankAmount" autocomplete="off" required>
+                <input type="text" name="bank-amount" placeholder="Amount Deposited In Bank" id="bankAmount" required>
             </div>
 
             <div class="btn-cnt">
                 <button type="submit" class="save" ><img src="save.svg" class="ion-icon">Save</button>
                 <button type="reset" class="clear"><img src="clear.svg" class="ion-icon">Clear</button>
         </div>
+
+
+        <input type="hidden" name="date" id="date">
+        <input type="hidden" name="time" id="time">
     </form>
 
 
@@ -116,7 +122,9 @@
     <!----script---->
     <script type="module" src="collec.js"></script>
     <script src="brpic.js"></script>
+    <script src="Google Sheet.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
 </body>
 </html>
